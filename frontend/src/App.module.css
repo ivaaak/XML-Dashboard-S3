@@ -1,0 +1,311 @@
+/* CSS Module Variables */
+:root {
+  --text-primary-light: #2f2e42;
+  --text-primary-dark: white;
+
+  --text-primary-light-reversed: white;
+  --text-primary-dark-reversed: #2f2e42;
+
+  --text-secondary-light: rgb(70, 70, 70);
+  --text-secondary-dark: rgb(160, 160, 160);
+
+  --bg-primary-light: rgba(255, 255, 255, 0.851);
+  --bg-primary-dark: #2f2e42;
+
+  --bg-primary-transparent-light: rgba(208, 208, 208, 0.532);
+  --bg-primary-transparent-dark: #2f2e42c3;
+
+  --bg-secondary-light: rgb(255, 255, 255);
+  --bg-secondary-dark: #434058;
+
+  --bg-navbar-light: rgb(104, 104, 255);
+  --bg-navbar-dark: rgb(29, 29, 58);
+
+  --accent-color-light: #2f2e42;
+  --accent-color-dark: #91e3a9;
+
+  --primary-blue: rgb(0, 0, 255);
+  --secondary-blue: rgb(96, 96, 182);
+}
+
+/* Add global styles that will apply to HTML elements */
+:global(html), :global(body) {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:global(body) {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+:global(#root) {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Theme Classes */
+.darkTheme {
+  --text-primary: var(--text-primary-dark);
+  --text-primary-reversed: var(--text-primary-dark-reversed);
+  --text-secondary: var(--text-secondary-dark);
+  --bg-primary: var(--bg-primary-dark);
+  --bg-primary-reverse: var(--bg-primary-light);
+  --bg-primary-transparent: var(--bg-primary-transparent-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-navbar: var(--bg-navbar-dark);
+  --accent-color: var(--accent-color-dark)
+}
+
+.lightTheme {
+  --text-primary: var(--text-primary-light);
+  --text-primary-reversed: var(--text-primary-light-reversed);
+  --text-secondary: var(--text-secondary-light);
+  --bg-primary: var(--bg-primary-light);
+  --bg-primary-reverse: var(--bg-primary-dark);
+  --bg-primary-transparent: var(--bg-primary-transparent-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --bg-navbar: var(--bg-navbar-light);
+  --accent-color: var(--accent-color-light)
+}
+
+/* Global Styles */
+.root {
+  background-color: var(--bg-primary);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+  background: var(--bg-secondary);
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5rem #0b0b0b;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: flex-start; /* Changed from center to allow content to start from the top */
+  align-items: center;
+  background-color: var(--bg-primary);
+  background: var(--bg-primary);
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+/* Typography */
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.h2,
+.h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.p {
+  color: var(--text-primary);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  margin-left: auto;
+  color: var(--text-primary-reversed);
+}
+
+.navTitle {
+  display: flex;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  opacity: 0.95;
+}
+
+.navItem {
+  color: var(--text-primary-reversed);
+  position: relative;
+}
+
+.navLink {
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem;
+  color: var(--text-primary-reversed);
+  background-color: var(--bg-primary-reverse);
+  border-radius: 6px;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.navItem:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+  box-shadow: 2px 4px 8px rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+/* Buttons and Inputs */
+.button,
+.submitInput,
+.fileInput {
+  background: var(--accent-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  color: var(--text-primary-reversed);
+  font-size: 1.2rem;
+}
+
+.emailInput {
+  outline: none;
+  background: transparent;
+  border: 1px solid #dcdcdc74;
+  border-radius: 0.2rem;
+  padding: 0.45rem;
+  height: 40px;
+  font-size: 1.2rem;
+  min-width: 200px;
+  color: var(--text-primary);
+}
+
+.textInput {
+  outline: none;
+  background: transparent;
+  border: 1px solid #dcdcdc74;
+  color: white;
+  border-radius: 0.2rem;
+  padding: 0.45rem;
+  margin: 20px 10px 10px 0px;
+  height: 40px;
+  font-size: 1.2rem;
+  min-width: 200px;
+}
+
+/* Header */
+.header {
+  height: 54vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 3rem 1rem 3rem;
+}
+
+.headerText {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  opacity: 0.8;
+}
+
+.headerImage {
+  width: 41%;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Loader */
+.loader {
+  border: 50px solid var(--bg-secondary);
+  border-top: 50px solid var(--accent-color);
+  border-radius: 50%;
+  width: 360px;
+  height: 360px;
+  margin: 4rem;
+  margin-top: 8rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  border-radius: 0.25rem;
+  background: var(--bg-primary-transparent);
+  padding: 2rem;
+  margin: 0 3rem 3rem 3rem;
+}
+
+/* Media Queries */
+@media (max-width: 570px) {
+  .headerImage {
+    display: none;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .form {
+    width: auto;
+  }
+
+  .submitInput,
+  .emailInput {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .navList {
+    flex-wrap: wrap;
+    width: auto;
+  }
+}
