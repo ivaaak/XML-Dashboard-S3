@@ -1,4 +1,13 @@
-## S3-based XML file search application
+# XML-Dashboard-S3 - S3-based XML file search application
+
+## Frontend: [XML Dashboard S3 - React Frontend](https://github.com/ivaaak/XML-Dashboard-S3/blob/main/frontend/README.md)
+## Backend: [XML Dashboard S3 - Express Backend](https://github.com/ivaaak/XML-Dashboard-S3/blob/main/backend/README.md)
+
+**Screenshots:**
+<img src="screenshots/1.png"></img>
+<img src="screenshots/2.png"></img>
+<img src="screenshots/3.png"></img>
+<img src="screenshots/4.png"></img>
 
 ## Backend (Node.js/Express)
 
