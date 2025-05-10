@@ -1,0 +1,187 @@
+.resultsContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.resultsHeader {
+    padding: 16px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.resultsHeader h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: #212529;
+}
+
+.resultsSummary {
+    font-size: 14px;
+    color: #495057;
+}
+
+.noResults {
+    padding: 40px 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 15px;
+}
+
+.resultsList {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.resultItem {
+    margin-bottom: 2px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.resultHeader {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #f8f9fa;
+}
+
+.fileInfo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.expandButton {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 2px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.expandButton:hover {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.fileName {
+    font-weight: 500;
+    color: #212529;
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
+.filePath {
+    color: #6c757d;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
+}
+
+.matchCount {
+    margin: 0 16px;
+    padding: 4px 8px;
+    background-color: #e7f5ff;
+    color: #1971c2;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.viewButton {
+    padding: 6px 12px;
+    font-size: 13px;
+    background-color: #e7f5ff;
+    color: #1971c2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.viewButton:hover {
+    background-color: #d0ebff;
+}
+
+.matchesList {
+    padding: 0 16px 16px 16px;
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+.matchesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.matchesTable th,
+.matchesTable td {
+    text-align: left;
+    padding: 8px 12px;
+    border: 1px solid #e9ecef;
+}
+
+.matchesTable th {
+    font-weight: 500;
+    background-color: #f8f9fa;
+    color: #495057;
+    font-size: 13px;
+}
+
+.matchRow:hover {
+    background-color: #f8f9fa;
+}
+
+.matchPath {
+    color: #495057;
+    font-size: 13px;
+    font-family: monospace;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.matchValue {
+    color: #212529;
+    font-size: 13px;
+    word-break: break-word;
+}
+
+.highlight {
+    background-color: #fff9db;
+    color: #f08c00;
+    padding: 1px 2px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .resultHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .fileInfo {
+        width: 100%;
+    }
+
+    .matchCount {
+        margin: 0;
+        align-self: flex-start;
+    }
+
+    .viewButton {
+        align-self: flex-end;
+    }
+}

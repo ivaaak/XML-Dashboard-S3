@@ -1,0 +1,180 @@
+.tableContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.tableHeader h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #212529;
+}
+
+.refreshButton {
+    padding: 8px 16px;
+    font-size: 13px;
+    color: #495057;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.refreshButton:hover {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.refreshButton:disabled {
+    background-color: #f1f3f5;
+    color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.filesTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.filesTable th,
+.filesTable td {
+    text-align: left;
+    padding: 12px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.filesTable th {
+    font-weight: 600;
+    background-color: #f8f9fa;
+    color: #495057;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sortableHeader {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sortableHeader:hover {
+    background-color: #e9ecef;
+}
+
+.sortIcon {
+    margin-left: 6px;
+    font-size: 10px;
+    color: #0066cc;
+}
+
+.fileName {
+    font-weight: 500;
+    color: #212529;
+}
+
+.filePath {
+    color: #6c757d;
+    font-size: 13px;
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.viewButton,
+.downloadButton {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.viewButton {
+    background-color: #e7f5ff;
+    color: #1971c2;
+}
+
+.viewButton:hover {
+    background-color: #d0ebff;
+}
+
+.downloadButton {
+    background-color: #e6fcf5;
+    color: #0ca678;
+}
+
+.downloadButton:hover {
+    background-color: #c3fae8;
+}
+
+.downloadButton:disabled {
+    background-color: #f1f3f5;
+    color: #adb5bd;
+    cursor: not-allowed;
+}
+
+.noFiles {
+    padding: 40px 20px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 15px;
+}
+
+.tableFooter {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.fileCount {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .tableHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .refreshButton {
+        align-self: flex-end;
+    }
+
+    .filesTable th,
+    .filesTable td {
+        padding: 10px 12px;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

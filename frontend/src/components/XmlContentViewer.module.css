@@ -1,0 +1,223 @@
+.viewerContainer {
+  padding: 16px 20px;
+}
+
+.viewerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.fileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.fileName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 4px;
+}
+
+.filePath {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.viewControls {
+  display: flex;
+  gap: 8px;
+}
+
+.viewModeButton,
+.expandButton,
+.collapseButton {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  color: #495057;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.viewModeButton:hover,
+.expandButton:hover,
+.collapseButton:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.activeViewMode {
+  background-color: #e7f5ff;
+  color: #1971c2;
+  border-color: #74c0fc;
+}
+
+.expandButton,
+.collapseButton {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.searchBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.searchNavigateButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.searchButton,
+.prevButton,
+.nextButton {
+  padding: 8px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.searchButton {
+  background-color: #e7f5ff;
+  color: #1971c2;
+}
+
+.searchButton:hover {
+  background-color: #d0ebff;
+}
+
+.prevButton,
+.nextButton {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.prevButton:disabled,
+.nextButton:disabled {
+  background-color: #f1f3f5;
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.contentWrapper {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  overflow: auto;
+  max-height: 600px;
+}
+
+.rawContent {
+  padding: 16px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.treeView {
+  padding: 16px;
+}
+
+.treeNode {
+  margin: 4px 0;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.nodeKey {
+  color: #364fc7;
+  font-weight: 500;
+}
+
+.nodeValue {
+  color: #2b8a3e;
+}
+
+.nodeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #868e96;
+  padding: 0 4px;
+  margin-right: 4px;
+  font-size: 10px;
+  width: 16px;
+}
+
+.nodeChildren {
+  padding-left: 20px;
+  border-left: 1px dashed #dee2e6;
+  margin-left: 4px;
+}
+
+.highlightMatch {
+  background-color: #fff9db;
+  color: #f08c00;
+  padding: 1px 2px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+.searchInfo {
+  font-size: 13px;
+  color: #495057;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .viewerHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .viewControls {
+    align-self: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .searchBar {
+    flex-wrap: wrap;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .searchNavigateButtons {
+    margin-left: auto;
+  }
+}
